@@ -63,14 +63,12 @@ function filterTable(
   if (categories.length > 0) {
     visibleProducts = visibleProducts.filter(p =>
       // eslint-disable-next-line prettier/prettier
-      categories.includes(p.category.id),
-    );
+      categories.includes(p.category.id));
   }
 
   if (normalized) {
     visibleProducts = visibleProducts.filter(person =>
-      person.name.toLowerCase().includes(normalized),
-    );
+      person.name.toLowerCase().includes(normalized));
   }
 
   return visibleProducts;
